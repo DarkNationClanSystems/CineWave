@@ -1,19 +1,5 @@
 [
   {
-    "id": "inception",
-    "type": "film",
-    "title": "Inception",
-    "img": "https://upload.wikimedia.org/wikipedia/en/7/7e/Inception_ver3.jpg",
-    "link": "https://linkvertise.de/inception-film"
-  },
-  {
-    "id": "joker",
-    "type": "film",
-    "title": "Joker",
-    "img": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
-    "link": "https://linkvertise.de/joker-film"
-  },
-  {
     "id": "interstellar",
     "type": "film",
     "title": "Interstellar",
@@ -24,29 +10,23 @@
     "id": "solo-leveling",
     "type": "serie",
     "title": "Solo Leveling",
-    "img": "https://static.wikia.nocookie.net/solo-leveling/images/3/3c/WM.png/revision/latest/scale-to-width-down/250?cb=20250115203146&path-prefix=de",
+    "img": "https://wall.alphacoders.com/big.php?i=1372162",
     "seasons": [
       {
         "title": "Staffel 1",
         "episodes": [
           { "title": "Folge 1", "link": "https://streamtape.com/v/olQMlzjdpeSJeAg/Solo_Leveling_Folge_1.mp4" },
-          { "title": "Folge 2", "link": "https://streamtape.com/v/lGoD4KA2aaHBr6/Solo_Leveling_Folge_2.mp4" }
-          { "title": "Folge 3", "link": "https://streamtape.com/v/VWdrlvpekwh3oV/Solo_Leveling_Folge_3.mp4" }
-          { "title": "Folge 4", "link": "https://streamtape.com/v/7jLlgqWgvZuAqp0/Solo_Leveling_Folge_4.mp4" }
-          { "title": "Folge 5", "link": "https://streamtape.com/v/VrKpjeR0Y6uKpVv/Solo_Leveling_Folge_5.mp4" }
-          { "title": "Folge 6", "link": "https://streamtape.com/v/KJd2Ojmvv3t0qzp/Solo_Leveling_Folge_6.mp4" }
-          { "title": "Folge 7", "link": "https://streamtape.com/v/2o2ypvbZjVtzda/Solo_Leveling_Folge_7.mp4" }
-          { "title": "Folge 8", "link": "https://streamtape.com/v/Lp6mqL0YGzCRXDQ/Solo_Leveling_Folge_8.mp4" }
-          { "title": "Folge 9", "link": "https://streamtape.com/v/bgjA3w4YdwCPyVV/Solo_Leveling_Folge_9.mp4" }
-          { "title": "Folge 10", "link": "https://streamtape.com/v/Kkawlk0zYRT03P0/Solo_Leveling_Folge_10.mp4" }
-          { "title": "Folge 11", "link": "https://streamtape.com/v/aR7P9M0QVVHxG73/Solo_Leveling_Folge_11.mp4" }
+          { "title": "Folge 2", "link": "https://streamtape.com/v/lGoD4KA2aaHBr6/Solo_Leveling_Folge_2.mp4" },
+          { "title": "Folge 3", "link": "https://streamtape.com/v/VWdrlvpekwh3oV/Solo_Leveling_Folge_3.mp4" },
+          { "title": "Folge 4", "link": "https://streamtape.com/v/7jLlgqWgvZuAqp0/Solo_Leveling_Folge_4.mp4" },
+          { "title": "Folge 5", "link": "https://streamtape.com/v/VrKpjeR0Y6uKpVv/Solo_Leveling_Folge_5.mp4" },
+          { "title": "Folge 6", "link": "https://streamtape.com/v/KJd2Ojmvv3t0qzp/Solo_Leveling_Folge_6.mp4" },
+          { "title": "Folge 7", "link": "https://streamtape.com/v/2o2ypvbZjVtzda/Solo_Leveling_Folge_7.mp4" },
+          { "title": "Folge 8", "link": "https://streamtape.com/v/Lp6mqL0YGzCRXDQ/Solo_Leveling_Folge_8.mp4" },
+          { "title": "Folge 9", "link": "https://streamtape.com/v/bgjA3w4YdwCPyVV/Solo_Leveling_Folge_9.mp4" },
+          { "title": "Folge 10", "link": "https://streamtape.com/v/Kkawlk0zYRT03P0/Solo_Leveling_Folge_10.mp4" },
+          { "title": "Folge 11", "link": "https://streamtape.com/v/aR7P9M0QVVHxG73/Solo_Leveling_Folge_11.mp4" },
           { "title": "Folge 12", "link": "https://streamtape.com/v/M613Kp1p9MTD8K/Solo_Leveling_Folge_12.mp4" }
-        ]
-      },
-      {
-        "title": "Staffel 2",
-        "episodes": [
-          { "title": "", "link": "" },
         ]
       }
     ]
@@ -60,15 +40,58 @@
       {
         "title": "Staffel 1",
         "episodes": [
-          { "title": "Folge 1 - An dich, in 2000 Jahren", "link": "https://linkvertise.de/aot-s1e1" },
-          { "title": "Folge 2 - Der Fall von Shiganshina", "link": "https://linkvertise.de/aot-s1e2" }
+          { "title": "Folge 1", "link": "https://linkvertise.de/aot-s1e1" },
+          { "title": "Folge 2", "link": "https://linkvertise.de/aot-s1e2" }
         ]
       },
       {
         "title": "Staffel 2",
         "episodes": [
-          { "title": "Folge 1 - Tier-Titan", "link": "https://linkvertise.de/aot-s2e1" },
-          { "title": "Folge 2 - Kriegshammer", "link": "https://linkvertise.de/aot-s2e2" }
+          { "title": "Folge 1", "link": "https://linkvertise.de/aot-s2e1" },
+          { "title": "Folge 2", "link": "https://linkvertise.de/aot-s2e2" }
+        ]
+      },
+      {
+        "title": "Staffel 3",
+        "episodes": [
+          { "title": "Folge 1", "link": "https://linkvertise.de/aot-s3e1" },
+          { "title": "Folge 2", "link": "https://linkvertise.de/aot-s3e2" }
+        ]
+      },
+      {
+        "title": "Staffel 4",
+        "episodes": [
+          { "title": "Folge 1", "link": "https://linkvertise.de/aot-s4e1" },
+          { "title": "Folge 2", "link": "https://linkvertise.de/aot-s4e2" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game-of-thrones",
+    "type": "serie",
+    "title": "Game of Thrones",
+    "img": "https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg",
+    "seasons": [
+      {
+        "title": "Staffel 1",
+        "episodes": [
+          { "title": "Folge 1", "link": "https://linkvertise.de/got-s1e1" },
+          { "title": "Folge 2", "link": "https://linkvertise.de/got-s1e2" }
+        ]
+      },
+      {
+        "title": "Staffel 2",
+        "episodes": [
+          { "title": "Folge 1", "link": "https://linkvertise.de/got-s2e1" },
+          { "title": "Folge 2", "link": "https://linkvertise.de/got-s2e2" }
+        ]
+      },
+      {
+        "title": "Staffel 3",
+        "episodes": [
+          { "title": "Folge 1", "link": "https://linkvertise.de/got-s3e1" },
+          { "title": "Folge 2", "link": "https://linkvertise.de/got-s3e2" }
         ]
       }
     ]
