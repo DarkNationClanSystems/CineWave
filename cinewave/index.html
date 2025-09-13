@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineWave</title>
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; background:#0a0a0a; color:#fff; transition:0.3s; }
+    a { text-decoration:none; }
+    header { padding:1rem; text-align:center; background:linear-gradient(90deg,#111,#222); border-bottom:3px solid #e50914; box-shadow:0 4px 10px rgba(0,0,0,0.5);}
+    header h1 { margin:0; font-size:2.4rem; font-weight:bold; color:#e50914; text-shadow:2px 2px 10px rgba(0,0,0,0.8); letter-spacing:2px; }
+    header p { margin:0; color:#bbb; }
+    #darkModeToggle { position:fixed; top:20px; right:20px; background:#e50914; border:none; color:#fff; padding:0.5rem 1rem; font-weight:bold; border-radius:25px; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.5); transition:0.3s;}
+    #darkModeToggle:hover { background:#b20710; }
+    input[type=text] { padding:0.8rem 1rem; width:80%; max-width:450px; margin:1.5rem auto; display:block; border-radius:30px; border:2px solid #e50914; background:#222; color:#fff; font-size:1rem; text-align:center; transition:0.3s; }
+    input[type=text]:focus { outline:none; border-color:#fff; box-shadow:0 0 10px #e50914; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1.5rem; padding:2rem; }
+    .card { background:#1b1b1b; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.7); transition:0.3s; cursor:pointer; }
+    .card:hover { transform:scale(1.08); box-shadow:0 10px 25px rgba(229,9,20,0.7); background:#2a2a2a; }
+    .card img { width:100%; height:300px; object-fit:cover; transition:0.3s; }
+    .card:hover img { transform:scale(1.05); }
+    .card h3 { margin:0.7rem; font-size:1.2rem; text-align:center; color:#fff; transition:0.3s; }
+    .card a { display:block; text-align:center; padding:0.6rem; margin:0.8rem 1rem 1.5rem 1rem; background:#e50914; color:#fff; border-radius:8px; font-weight:bold; transition:0.3s; }
+    .card a:hover { background:#b20710; transform:scale(1.05); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🎬 CineWave</h1>
+  <p>Dein Portal für Filme & Serien</p>
+</header>
+
+<button id="darkModeToggle">🌙 Dark Mode</button>
+<input type="text" id="searchBar" placeholder="🔍 Film oder Serie suchen...">
+<main class="grid" id="contentGrid"></main>
+
+<script>
+const grid=document.getElementById("contentGrid");
+const searchBar=document.getElementById("searchBar");
+const darkModeToggle=document.getElementById("darkModeToggle");
+let dark=true;
+darkModeToggle.addEventListener("click",()=>{
+  dark=!dark;
+  if(dark){document.body.style.backgroundColor="#0a0a0a";document.body.style.color="#fff";}
+  else{document.body.style.backgroundColor="#fff";document.body.style.color="#111";}
+});
+let content=[];
+async function loadContent(){
+  const res=await fetch("content.json");
+  content=await res.json();
+  displayContent(content);
+}
+function displayContent(list){
+  grid.innerHTML="";
+  list.forEach(item=>{
+    const card=document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML=`
+      <img src="${item.img}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      ${item.type==="film"?`<a href="${item.link}" target="_blank">▶ Film abspielen</a>`:`<a href="serie.html?id=${item.id}">📺 Zur Serie</a>`}
+    `;
+    grid.appendChild(card);
+  });
+}
+searchBar.addEventListener("keyup",(e)=>{
+  const searchText=e.target.value.toLowerCase();
+  const filtered=content.filter(item=>item.title.toLowerCase().includes(searchText));
+  displayContent(filtered);
+});
+loadContent();
+</script>
+</body>
+</html>
