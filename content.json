@@ -24,13 +24,13 @@
     "id": "solo-leveling",
     "type": "serie",
     "title": "Solo Leveling",
-    "img": "https://upload.wikimedia.org/wikipedia/en/7/77/Breaking_Bad_season_1_DVD.jpg",
+    "img": "https://static.wikia.nocookie.net/solo-leveling/images/3/3c/WM.png/revision/latest/scale-to-width-down/250?cb=20250115203146&path-prefix=de",
     "seasons": [
       {
         "title": "Staffel 1",
         "episodes": [
-          { "title": "Folge 1 - German", "link": "https://streamtape.com/v/olQMlzjdpeSJeAg/Solo_Leveling_Folge_1.mp4" },
-          { "title": "Folge 2 - German", "link": "https://linkvertise.de/breakingbad-s1e2" }
+          { "title": "Folge 1", "link": "https://streamtape.com/v/olQMlzjdpeSJeAg/Solo_Leveling_Folge_1.mp4" },
+          { "title": "Folge 2", "link": "https://streamtape.com/v/lGoD4KA2aaHBr6/Solo_Leveling_Folge_2.mp4" }
         ]
       },
       {
