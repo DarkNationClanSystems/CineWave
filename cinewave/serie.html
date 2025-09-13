@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineWave - Serie</title>
+<style>
+body { margin:0; font-family:Arial,sans-serif; background:#0a0a0a; color:#fff; transition:0.3s;}
+a{text-decoration:none;}
+header{padding:1rem;text-align:center;background:linear-gradient(90deg,#111,#222);border-bottom:3px solid #e50914;box-shadow:0 4px 10px rgba(0,0,0,0.5);}
+header h1{margin:0;font-size:2.4rem;font-weight:bold;color:#e50914;text-shadow:2px 2px 10px rgba(0,0,0,0.8);letter-spacing:2px;}
+#darkModeToggle{position:fixed;top:20px;right:20px;background:#e50914;border:none;color:#fff;padding:0.5rem 1rem;font-weight:bold;border-radius:25px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:0.3s;}
+#darkModeToggle:hover{background:#b20710;}
+.container{padding:2rem;max-width:900px;margin:auto;}
+.season{margin:1rem 0;overflow:hidden;}
+.season h2{cursor:pointer;background:#222;padding:0.7rem 1rem;border-radius:8px;font-size:1.2rem;border-left:4px solid #e50914;transition:0.3s;}
+.season h2:hover{background:#333; transform:scale(1.02);}
+.episodes{max-height:0;overflow:hidden;transition:max-height 0.5s ease-out;margin-top:0.5rem;padding-left:1rem;}
+.episodes.open{max-height:1000px;}
+.episode{margin:0.4rem 0;}
+.episode a{display:inline-block;background:#e50914;padding:0.4rem 1rem;border-radius:6px;color:#fff;font-weight:bold;transition:0.3s;}
+.episode a:hover{background:#b20710;transform:scale(1.05);}
+</style>
+</head>
+<body>
+<header><h1>📺 CineWave</h1></header>
+<button id="darkModeToggle">🌙 Dark Mode</button>
+<div class="container">
+  <h1 id="serieTitle"></h1>
+  <div id="seasonList"></div>
+</div>
+<script>
+const urlParams=new URLSearchParams(window.location.search);
+const serieId=urlParams.get("id");
+const serieTitle=document.getElementById("serieTitle");
+const seasonList=document.getElementById("seasonList");
+const darkModeToggle=document.getElementById("darkModeToggle");
+let dark=true;
+darkModeToggle.addEventListener("click",()=>{
+  dark=!dark;
+  if(dark){document.body.style.backgroundColor="#0a0a0a";document.body.style.color="#fff";}
+  else{document.body.style.backgroundColor="#fff";document.body.style.color="#111";}
+});
+async function loadSerie(){
+  const res=await fetch("content.json");
+  const content=await res.json();
+  const serie=content.find(item=>item.id===serieId&&item.type==="serie");
+  if(!serie){serieTitle.textContent="❌ Serie nicht gefunden"; return;}
+  serieTitle.textContent=serie.title;
+  serie.seasons.forEach(season=>{
+    const seasonDiv=document.createElement("div");seasonDiv.classList.add("season");
+    const seasonTitle=document.createElement("h2");seasonTitle.textContent=season.title;
+    const episodesDiv=document.createElement("div");episodesDiv.classList.add("episodes");
+    season.episodes.forEach(ep=>{
+      const epDiv=document.createElement("div");epDiv.classList.add("episode");
+      epDiv.innerHTML=`<span>${ep.title}</span> - <a href="${ep.link}" target="_blank">▶ Anschauen</a>`;
+      episodesDiv.appendChild(epDiv);
+    });
+    seasonTitle.addEventListener("click",()=>{episodesDiv.classList.toggle("open");});
+    seasonDiv.appendChild(seasonTitle);
+    seasonDiv.appendChild(episodesDiv);
+    seasonList.appendChild(seasonDiv);
+  });
+}
+loadSerie();
+</script>
+</body>
+</html>
