@@ -1,0 +1,67 @@
+[
+  {
+    "id": "inception",
+    "type": "film",
+    "title": "Inception",
+    "img": "https://upload.wikimedia.org/wikipedia/en/7/7e/Inception_ver3.jpg",
+    "link": "https://linkvertise.de/inception-film"
+  },
+  {
+    "id": "joker",
+    "type": "film",
+    "title": "Joker",
+    "img": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
+    "link": "https://linkvertise.de/joker-film"
+  },
+  {
+    "id": "interstellar",
+    "type": "film",
+    "title": "Interstellar",
+    "img": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
+    "link": "https://linkvertise.de/interstellar-film"
+  },
+  {
+    "id": "breaking-bad",
+    "type": "serie",
+    "title": "Breaking Bad",
+    "img": "https://upload.wikimedia.org/wikipedia/en/7/77/Breaking_Bad_season_1_DVD.jpg",
+    "seasons": [
+      {
+        "title": "Staffel 1",
+        "episodes": [
+          { "title": "Folge 1 - Pilot", "link": "https://linkvertise.de/breakingbad-s1e1" },
+          { "title": "Folge 2 - Die Katze ist im Sack", "link": "https://linkvertise.de/breakingbad-s1e2" }
+        ]
+      },
+      {
+        "title": "Staffel 2",
+        "episodes": [
+          { "title": "Folge 1 - Sieben Dreißig", "link": "https://linkvertise.de/breakingbad-s2e1" },
+          { "title": "Folge 2 - Grill", "link": "https://linkvertise.de/breakingbad-s2e2" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "attack-on-titan",
+    "type": "serie",
+    "title": "Attack on Titan",
+    "img": "https://upload.wikimedia.org/wikipedia/en/7/70/Attack_on_Titan_S1_DVD.jpg",
+    "seasons": [
+      {
+        "title": "Staffel 1",
+        "episodes": [
+          { "title": "Folge 1 - An dich, in 2000 Jahren", "link": "https://linkvertise.de/aot-s1e1" },
+          { "title": "Folge 2 - Der Fall von Shiganshina", "link": "https://linkvertise.de/aot-s1e2" }
+        ]
+      },
+      {
+        "title": "Staffel 2",
+        "episodes": [
+          { "title": "Folge 1 - Tier-Titan", "link": "https://linkvertise.de/aot-s2e1" },
+          { "title": "Folge 2 - Kriegshammer", "link": "https://linkvertise.de/aot-s2e2" }
+        ]
+      }
+    ]
+  }
+]
