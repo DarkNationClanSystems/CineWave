@@ -21,16 +21,16 @@
     "link": "https://linkvertise.de/interstellar-film"
   },
   {
-    "id": "breaking-bad",
+    "id": "solo-leveling",
     "type": "serie",
-    "title": "Breaking Bad",
+    "title": "Solo Leveling",
     "img": "https://upload.wikimedia.org/wikipedia/en/7/77/Breaking_Bad_season_1_DVD.jpg",
     "seasons": [
       {
         "title": "Staffel 1",
         "episodes": [
-          { "title": "Folge 1 - Pilot", "link": "https://linkvertise.de/breakingbad-s1e1" },
-          { "title": "Folge 2 - Die Katze ist im Sack", "link": "https://linkvertise.de/breakingbad-s1e2" }
+          { "title": "Folge 1 - German", "link": "https://streamtape.com/v/olQMlzjdpeSJeAg/Solo_Leveling_Folge_1.mp4" },
+          { "title": "Folge 2 - German", "link": "https://linkvertise.de/breakingbad-s1e2" }
         ]
       },
       {
